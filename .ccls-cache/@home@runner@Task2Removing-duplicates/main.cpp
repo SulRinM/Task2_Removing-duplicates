@@ -19,6 +19,8 @@ int main() {
       break;
   }
   std::sort(v.begin(), v.end());
+  auto temp = std::unique(v.begin(), v.end());
+  v.erase(temp, v.end());
   std::cout << "[OUT]: " << std::endl;
   std::vector<int>::iterator it;
   for (it = v.end() - 1; it >= v.begin(); it--) {
